@@ -1,10 +1,9 @@
 *, *::before, *::after{
     box-sizing: border-box;
-
 }
 
 body{
-    background-color: #9112b8;
+    background-image: linear-gradient(to right, violet, indigo);
     margin: 0px;
     min-height: 100vh;
     display: flex;
@@ -12,33 +11,24 @@ body{
     align-items: center;
 }
 
-.piano
-{
+.piano{
     display: flex;
-
 }
-.key
-{
-    height: calc(var(--width) * 4);
+
+.key{
+    height: calc(var(--width) *4);
     width: var(--width);
-    box-shadow: 0 10px 5px black;
+    box-shadow: inset 0px 0px 5px black;
 }
 
-.white
-{
+.White{
     --width: 90px;
     height: 350px;
     background-color: white;
     border: 1px solid #333;
-
 }
 
-.white.active
-{
-    background-color: #ccc;
-}
-
-.black
+.Black
 {
     --width: 60px;
     height: 240px;
@@ -46,8 +36,13 @@ body{
     margin-left: calc(var(--width) / -2);
     margin-right: calc(var(--width) / -2);
     z-index: 1;
+    border: 1px solid #333;
 }
 
-.black.active{
+.White.active{
+    background-color: #ccc;
+}
+
+.Black.active{
     background-color: #333;
 }
